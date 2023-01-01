@@ -1,0 +1,88 @@
+
+
+
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #5190a3;
+}
+
+.container {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+.header {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
+}
+
+
+
+.columns {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+.columns-item {
+	flex: 1 0 24rem;
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.items1{
+	background-color: aqua;
+	width: 20rem;
+	height: 20rem;
+}
+.items2{
+	background-color: black;
+	width: 20rem;
+	height: 20rem;
+}
+.items3{
+	background-color: blue;
+	width: 20rem;
+	height: 20rem;
+}
+.items4{
+	background-color: rgb(23, 212, 17);
+	width: 20rem;
+	height: 20rem;
+}
+.items5{
+	background-color: rgb(209, 28, 15);
+	width: 20rem;
+	height: 20rem;
+}
+
+
+
+
+@supports (display: grid) {
+	.columns {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.columns,
+	.columns-item {
+		margin: 0;
+	}
+}
